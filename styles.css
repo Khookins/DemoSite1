@@ -19,7 +19,7 @@
 }
 #logo{
     height: auto;
-    width: 100%;
+    width: 100%
 }
 nav{
     display: flex;
@@ -103,4 +103,45 @@ width: 10%;
     cursor: pointer;
     font-family: 'Rajdhani', sans-serif;
 
+    transition-duration: 500ms;
+}
+
+.prime-button:hover{
+    transition-duration: 500ms;
+    border-color: var(--PrimeColor);
+    background-color: var(--PrimeColor);
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 12px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: var(--PrimeColor);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+    .nav-links ul li a{
+        display: block;
+        color: var(--LightColor);
+    }
+    nav .fa{
+        display: block;
+        color: var(--LightColor);
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
 }
