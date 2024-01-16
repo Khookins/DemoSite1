@@ -1,20 +1,29 @@
 <head>
     <title>SUS WEBSITE</title>
     <meta name="viewport" content="with=device-width, initial-scale=1.0"/>
+
+    <!-- Linking Stuff -->
+
     <section>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="CSS\styles.css"/>
         <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="JS\script.js" defer></script>
     </section>
+
+    <!-- End Of Linking Stuff -->
+
 </head>
+
+
 <body>
     <section class="header">
         <nav>
             <a href="index.html" id="logo-container"><img src="images\logo.png" alt="LOGO" id="logo"></a>
-            <div class="nav-links">
-                <i class="fa fa-times-circle" aria-hidden="false"></i>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times-circle" aria-hidden="false" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
@@ -23,14 +32,36 @@
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars" aria-hidden="true"></i>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
         </nav>
 
-<div class="text-box">
-    <h1>Worlds Best Snowboarding Mountain</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <a href="" class="prime-button">Click Here To Schedule A Snowboarding</a>
-</div>
+        <div class="text-box">
+            <h1>Worlds Best Snowboarding Mountain</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="" class="prime-button">Click Here To Schedule A Snowboarding</a>
+        </div>
 
     </section>
+
+    <!-- Lessons Section -->
+    <section class="lessons center">
+        <h1>Snowboarding Lessons We Offer</h1>
+        <p>Some Random Stuff About Snowboarding Lessons Idk</p>
+
+        <div class="row">
+            <div class="lessons-col">
+                <h3>Beginner</h3>
+                <p>Easy For Beginners, Made For Learning The Basics Of Snowboarding. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="lessons-col">
+                <h3>Intermediate</h3>
+                <p>A Little Harder Than Beginner, Made For Learning The Slightly More Advanced Snowboarding Skills. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+            </div>
+            <div class="lessons-col">
+                <h3>Difficult</h3>
+                <p>The Proper Pro Classes, Learn The Most Advanced Skills Of Snowboarding. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </section>
+
 </body>

@@ -1,4 +1,4 @@
-
+/* CSS! */
 *{
     margin: 0;
     padding: 0;
@@ -7,11 +7,25 @@
     --PrimeColor: #A52422;
     --SecondColor: #33658A;
     --DarkColor: #30343F;
+    --SemiDarkColor: #595959;
+
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.center{
+    text-align: center;
+}
+body{
+    overflow-x:hidden;
+    max-width: 100vw;
+}
+html{
+    overflow-x:hidden;
+    max-width: 100vw;
 }
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(#33658A,#33658ACC), url("images/snowymountains.jpg");
+    background-image: linear-gradient(#33658A,#33658ACC), url("../images/snowymountains.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -56,7 +70,7 @@ width: 10%;
     content: '';
     width: 0%;
     height: 4px;
-    background: var(--DarkColor);
+    background: var(--GrayColor);
     display: block;
     margin: auto;
 
@@ -115,7 +129,28 @@ width: 10%;
 nav .fa{
     display: none;
 }
-
+.lessons{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+}
+.lessons h1{
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--DarkColor);
+}
+.lessons p{
+    color: var(--SemiDarkColor) ;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
 @media(max-width: 700px){
     .text-box h1{
         font-size: 12px;
@@ -129,9 +164,12 @@ nav .fa{
         height: 100vh;
         width: 200px;
         top: 0;
-        right: 0;
+        right: -200px;
         text-align: left;
         z-index: 2;
+
+        transition-property: right;
+        transition-duration: 500ms;
     }
     .nav-links ul li a{
         display: block;
