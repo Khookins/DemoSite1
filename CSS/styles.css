@@ -61,10 +61,14 @@ width: 10%;
     font-size: 150%;
 
     font-family: 'Rajdhani', sans-serif;
+    transition-property: color;
+    transition-duration: 200ms;
 }
 .nav-links ul li :hover{
     color: var(--GrayColor);
     cursor: help;
+    transition-property: color;
+    transition-duration: 200ms;
 }
 .nav-links ul li ::after{
     content: '';
@@ -151,6 +155,28 @@ nav .fa{
     display: flex;
     justify-content: space-between;
 }
+.lessons-col{
+    flex-basis: 31%;
+    background: var(--LightColor);
+    border-radius: 15px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+
+    transition-duration: 500ms;
+    transition-property: box-shadow;
+}
+.lessons-col:hover{
+    box-shadow: 0 0 20px 0px rgba(1, 1, 1, 0.2);
+    transition-property: box-shadow;
+    transition-duration: 500ms;
+}
+.lessons-col h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
 @media(max-width: 700px){
     .text-box h1{
         font-size: 12px;
@@ -159,7 +185,7 @@ nav .fa{
         display: block;
     }
     .nav-links{
-        position: absolute;
+        position: fixed;
         background: var(--PrimeColor);
         height: 100vh;
         width: 200px;
@@ -182,4 +208,8 @@ nav .fa{
         font-size: 22px;
         cursor: pointer;
     }
+    .row{
+        flex-direction: column;
+    }
+
 }
