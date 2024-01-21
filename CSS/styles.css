@@ -176,7 +176,38 @@ nav .fa{
     font-weight: 600;
     margin: 10px 0;
 }
+.our-big-mountain{
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+.big-mountain-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+.big-mountain-col img{
+    width: 200%;
+    margin-left: -150px;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
 
+    transition-duration: 500ms;
+}
+.layer:hover{
+    background: color-mix(in srgb, var(--PrimeColor), transparent 66%);
+    transition-duration: 500ms;
+}
 @media(max-width: 700px){
     .text-box h1{
         font-size: 12px;
