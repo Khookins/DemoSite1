@@ -12,8 +12,12 @@
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 100;
 }
+/* Font Weights */
 .small{
     font-weight: 200;
+}
+.small-plus{
+    font-weight: 300;
 }
 .medium{
     font-weight: 400;
@@ -21,7 +25,7 @@
 .large{
     font-weight: 800;
 }
-
+/* General */
 h1{
     font-weight: 400;
 
@@ -50,18 +54,23 @@ html{
     background-position: center;
     position: relative;
 }
-#logo{
-    height: auto;
-    width: 100%
-}
+
+/* Navigation / Menu */
 nav{
     display: flex;
     padding: 2% 3%;
     justify-content: space-between;
     align-items: center;
 }
+nav .fa{
+    display: none;
+}
+#logo{
+    height: auto;
+    width: 100%
+}
 #logo-container{
-width: 10%;
+    width: 10%;
 }
 .nav-links{
     flex: 1;
@@ -107,6 +116,7 @@ width: 10%;
     transition-property: width, height;
     transition-duration: 500ms, 500ms;
 }
+/* Textbox */
 .text-box{
     width: 90%;
     color: var(--LightColor);
@@ -128,6 +138,7 @@ width: 10%;
     margin: 10px 0px 40px;
     font-family: 'Roboto Condensed', sans-serif;
 }
+
 .prime-button{
     display: inline-block;
     text-decoration: none;
@@ -148,10 +159,7 @@ width: 10%;
     border-color: var(--PrimeColor);
     background-color: var(--PrimeColor);
 }
-
-nav .fa{
-    display: none;
-}
+/* Lessons */
 .lessons{
     width: 80%;
     margin: auto;
@@ -195,6 +203,7 @@ nav .fa{
     font-weight: 600;
     margin: 10px 0;
 }
+/* Our Big Mountain */
 .our-big-mountain{
     font-weight: 200;
     width: 80%;
@@ -212,6 +221,7 @@ nav .fa{
 .big-mountain-col img{
     width: 200%;
     margin-left: -150px;
+    min-height: 100%;
 }
 .layer{
     background: transparent;
@@ -274,6 +284,55 @@ nav .fa{
     transition-duration: 10s;
     transition-delay: 10s;
 }
+/* Facilities */
+.facilities{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    min-width: 200px;
+    border-radius: 10px;
+    min-height: 300px;
+}
+.facilities-col p{
+    padding: 0;
+    font-weight: 300;
+}
+.facilities-col h3{
+    text-align: left;
+    margin-top: 16px;
+    margin-bottom: 15px;
+}
+.bj{
+    position: absolute;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: aliceblue;
+    opacity: 0;
+    
+    transition-duration: 25ms;
+}
+#breadstuarant:hover .bj{
+    opacity: 1;
+
+    transition-delay: 5s;
+    transition-duration: 500ms
+}
+/* reviews */
+.reviews{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+}
+/* Media Tag, For Stuff On Mobile */
 @media(max-width: 700px){
     .text-box h1{
         font-size: 12px;
