@@ -8,6 +8,7 @@
     --SecondColor: #33658A;
     --DarkColor: #30343F;
     --SemiDarkColor: #595959;
+    --DarkDarkColor: #17181a;
 
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 100;
@@ -27,10 +28,13 @@
 }
 /* General */
 h1{
-    font-weight: 400;
+    font-weight: 600;
 
 }
 h3{
+    font-weight: 500;
+}
+h4{
     font-weight: 400;
 }
 .center{
@@ -328,9 +332,78 @@ nav .fa{
 }
 /* reviews */
 .reviews{
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding-top: 100px;
+    background-color: var(--DarkColor);
+}
+.carousel *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.carousel .bodymimic{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel .container{
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+}
+.carousel .content-stuff{
+    width: 70%;
+    min-height: inherit;
+    margin: 30px auto;
+    border: 5px solid var(--DarkDarkColor);
+    background-color: var(--PrimeColor);
+    border-radius: 45px;
+}
+.carousel .rev-row{
+    width: 100%;
+    min-height: inherit;
+    position: relative;
+    overflow: hidden;
+}
+.carousel .rev-row-item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.carousel .rev-row-item img{
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 5px;
+    outline: 5px solid var(--SecondColor);
+    outline-offset: 2px;
+}
+.carousel .rev-row-item:not(.active){
+    top: 0;
+    left: -100%;
+}
+.carousel h3{
+    color: var(--GrayColor);
+    font-size: 30px;
+    padding: 7px;
+}
+.carousel h4{
+    color: var(--GrayColor);
+}
+.carousel p{
+    color: var(--LightColor);
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 10px;
+    letter-spacing: 1px;
 }
 /* Media Tag, For Stuff On Mobile */
 @media(max-width: 700px){
