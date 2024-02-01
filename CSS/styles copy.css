@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     --LightColor: #EAE0CC;
-    --GreyLightColor: #D7D7D7;
     --GrayColor: #bababa;
     --PrimeColor: #A52422;
     --SecondColor: #33658A;
@@ -336,80 +335,76 @@ nav .fa{
     width: 100%;
     margin: auto;
     padding-top: 100px;
-    background-color: var(--GreyLightColor);
+    background-color: var(--DarkColor);
 }
-
-.carousel
-{
-    border: 1px solid color-mix(in srgb, var(--GreyLightColor), (--DarkDarkColor));
-    border-radius: 12px;
-    box-shadow: 0px 0px 2px 2px color-mix(in srgb, var(--DarkDarkColor), transparent);
-    overflow: hidden;
-    background-color: var(--GreyLightColor);
-    padding: 55px 37px 51px 37px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 25px;
-    height: auto;
-    min-height: 65vh;
-    position: relative;
-
+.carousel *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-
-.carousel .review-item-wrapper
-{
-    position: absolute;
-    height: 100%;
+.carousel .bodymimic{
     width: 100%;
+    min-height: 100vh;
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-
+    justify-content: center;
+    align-items: center;
 }
-
-.carousel .carousel-text-content
-{
+.carousel .container{
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+}
+.carousel .content-stuff{
+    width: 70%;
+    min-height: inherit;
+    margin: 30px auto;
+    border: 5px solid var(--DarkDarkColor);
+    background-color: var(--PrimeColor);
+    border-radius: 45px;
+}
+.carousel .rev-row{
+    width: 100%;
+    min-height: inherit;
+    position: relative;
+    overflow: hidden;
+}
+.carousel .rev-row-item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    text-align: left;
-    width: 50%;
-    /*justify-content: center;*/
 }
-
-.carousel .carousel-text-content p
-{
-    color: var(--SecondColor);
-    font-size: 36px;
-    line-height: 44px;
-    font-family: 'Noto Traditional Nushu';
-    font-weight: 300;
-    word-spacing: 1px;
-}
-.carousel .carousel-text-content h3
-{
-    color: var(--DarkColor);
-    font-size: 30px;
-}
-.carousel .carousel-text-content h4
-{
-    color: var(--DarkColor);
-}
-
-.carousel img
-{
-    width: 391px;
-    height: 331px;
-    border-radius: 2px;
-    box-shadow: 0 0 4px 1px var(--DarkDarkColor);
-    justify-self: center;
+.carousel .rev-row-item img{
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
     object-fit: cover;
+    margin-bottom: 5px;
+    outline: 5px solid var(--SecondColor);
+    outline-offset: 2px;
 }
-
-.carousel .review-item-wrapper:not(.active){
+.carousel .rev-row-item:not(.active){
     top: 0;
     left: -100%;
 }
-
+.carousel h3{
+    color: var(--GrayColor);
+    font-size: 30px;
+    padding: 7px;
+}
+.carousel h4{
+    color: var(--GrayColor);
+}
+.carousel p{
+    color: var(--LightColor);
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 10px;
+    letter-spacing: 1px;
+}
 /* Media Tag, For Stuff On Mobile */
 @media(max-width: 700px){
     .text-box h1{
