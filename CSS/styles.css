@@ -353,13 +353,13 @@ nav .fa {
     height: fit-content;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .carousel .review-item-wrapper {
     width: 100%;
     box-sizing: border-box;
-    padding: 55px 37px 51px 37px;
+    padding: 55px 37px 0px 37px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -379,7 +379,6 @@ nav .fa {
 
 .carousel .carousel-text-content p {
     color: var(--SecondColor);
-    font-size: 2em;
     line-height: 2.2ex;
     font-family: "Noto Traditional Nushu";
     font-weight: 300;
@@ -397,9 +396,10 @@ nav .fa {
 
 .carousel img {
     position: relative;
-    margin: 55px 37px 51px 37px;
+    margin: 0 0 0 37px;
     width: 50%;
-    height: 500px;
+    height: 391px;
+    object-position: center 30%;
     flex-shrink: 1;
     border-radius: 2px;
     box-shadow: 0 0 4px 1px var(--DarkDarkColor);
@@ -417,7 +417,35 @@ nav .fa {
     top: 0;
     transition: transform 0.5s ease-out;
 }
+.small-rev{
+    font-size: 2em;
+}
+.medium-rev{
+    font-size: 1.8em;
+}
+.large-rev{
+    font-size: 1.5em;
+}
 
+#carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 51px;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.dot{
+    border-radius: 100px;
+    height: 24px;
+    width: 24px;
+    background-color:  #33648a69;
+    margin: 0 4 0 4;
+}
+
+.active-dot{
+    background-color: var(--SecondColor);
+}
 /* Media Tag, For Stuff On Mobile */
 @media (max-width: 700px) {
     .text-box h1 {
