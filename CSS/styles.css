@@ -366,6 +366,9 @@ nav .fa {
     flex: 0 0 100%;
     height: fit-content;
     position: relative;
+
+    transform: translateX();
+    transition: transform 1.5s ease;
 }
 
 .carousel .carousel-text-content {
@@ -409,13 +412,27 @@ nav .fa {
 .carousel .review-item-wrapper:not(.active) {
     position: absolute;
     top: 0;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-out;
-}
+    transform: translateX(-100%);
 
+    transition: transform 1.5s ease;
+}
+.carousel .review-item-wrapper:not(.previously-active):not(.active){
+    position: absolute;
+    top: 0;
+    transform: translateX(100%);
+
+    transition: none;
+}
 .carousel .review-item-wrapper .active {
     top: 0;
-    transition: transform 0.5s ease-out;
+
+}
+.carousel .review-item-wrapper .previously-active {
+    position: absolute;
+    top: 0;
+    transform: translateX(100%);
+
+    transition: transform 1.5s ease; 
 }
 .small-rev{
     font-size: 2em;
@@ -441,10 +458,18 @@ nav .fa {
     width: 24px;
     background-color:  #33648a69;
     margin: 0 4 0 4;
-}
 
+    transition-duration: 300ms;
+    transition-property: background-color;
+}
+.dot:hover{
+    cursor: pointer;
+}
 .active-dot{
     background-color: var(--SecondColor);
+
+    transition-duration: 300ms;
+    transition-property: background-color;
 }
 /* Media Tag, For Stuff On Mobile */
 @media (max-width: 700px) {
