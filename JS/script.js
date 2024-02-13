@@ -2,8 +2,16 @@
 var navLinks = document.getElementById("navLinks")
 var reviewLarry = document.getElementsByClassName("review-item-wrapper")
 var reviewLength = document.getElementsByClassName("review-item-wrapper").length
+const reviewTimeout = 5000
+const transitionTime = 1500
+
+//state vars 
 var reviewCount = 1
 let timeoutID = null
+var allowClicks = true
+
+
+
 const createDot = () =>
 {
     const dot = document.createElement("div")
@@ -23,22 +31,24 @@ function getVisibleReviews(larry){
     }
     return visibleReviews
 }
-function getActiveReview(){
 
-}
-function setActiveReview(i, manual){
+function setActiveReview(i) {
     var dotParent = document.getElementById("carousel-dots")
     var dotLarry = dotParent.childNodes
 
+    allowClicks = false;
+    setTimeout(() => {
+        allowClicks = true
+    }, transitionTime)
+
     // Interval Between Reviews
     timeoutID = setTimeout(() => {
-        var manual = false;
-        setActiveReview(reviewCount++ % getVisibleReviews(reviewLarry).length, false)
+        setActiveReview(++reviewCount % getVisibleReviews(reviewLarry).length)
         console.log("Current Review: " + reviewCount)
-    }, 5000 * (manual ? 0 : 1));
+    }, reviewTimeout);
 
     for (var index = 0; index < getVisibleReviews(reviewLarry).length; index++){
-        if (i == index){
+        if (i == index) {
             reviewLarry.item(index).classList.add("active")
             dotLarry.item(index).classList.add("active-dot")
         }
@@ -46,6 +56,11 @@ function setActiveReview(i, manual){
             reviewLarry.item(index).classList.add("previously-active")
             reviewLarry.item(index).classList.remove("active")
             dotLarry.item(index).classList.remove("active-dot")
+
+            const copyIndex = index
+            setTimeout(() => {
+                reviewLarry.item(copyIndex).classList.remove("previously-active")
+            }, transitionTime)
         }
         else{
             reviewLarry.item(index).classList.remove("active")
@@ -81,12 +96,20 @@ for (var i = 0; i < reviewLength; i++){
     // Use Getter Functions Instead For Review Count
     const dotIndex = i
     dot.onclick = (e) => {
-        // Clearing Old Timeout
-        clearTimeout(timeoutID)
-        var manual = true;
-        console.log("Cleared Timeout: " + timeoutID)
-        setActiveReview(dotIndex, manual)
-        reviewCount = dotIndex
+        if (allowClicks) {
+            // Clearing Old Timeout
+            clearTimeout(timeoutID)
+            console.log("Cleared Timeout: " + timeoutID)
+            setActiveReview(dotIndex)
+            reviewCount = dotIndex
+
+            //allowClicks = false
+            /*
+            setTimeout(() => {
+                allowClicks = true
+            }, transitionTime)
+            */
+        }
     }
 }
 

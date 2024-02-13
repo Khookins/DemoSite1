@@ -463,7 +463,7 @@ nav .fa {
     transition-property: background-color;
 }
 .dot:hover{
-    cursor: pointer;
+    cursor:pointer;
 }
 .active-dot{
     background-color: var(--SecondColor);
