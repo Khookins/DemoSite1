@@ -2,7 +2,7 @@
 var navLinks = document.getElementById("navLinks")
 var reviewLarry = document.getElementsByClassName("review-item-wrapper")
 var reviewLength = document.getElementsByClassName("review-item-wrapper").length
-const reviewTimeout = 5000
+const reviewTimeout = 30000
 const transitionTime = 1500
 
 //state vars 
