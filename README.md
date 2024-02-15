@@ -6,4 +6,4 @@ A Totatally Normal Website, Nothing To See Here :)
 LOOKING IN THE "images" FOLDER IS STRICTLY FORBIDDEN 
 
 To Visit The Website, Go To The Link Here:
-https://snowboarding-website.netifly.app
+https://snowboarding-website.netlify.app
